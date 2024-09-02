@@ -15,5 +15,5 @@ services:
     restart: always
     environment:
      - DISCORD_TOKEN=XXXXXXXXXXXXX
-     - LANGUAGE=zh_TW
+     - LOCALE=zh_TW
 ```
