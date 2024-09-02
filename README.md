@@ -10,7 +10,7 @@ MapleBot is a simple music bot by discord.py.
 ```docker-compose
 services:
   maplebot:
-    image: maplebot:latest
+    image: tony53517230/maplebot:latest
     container_name: maplebot
     restart: always
     environment:
