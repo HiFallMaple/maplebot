@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+venv/
+docker-compose.yml
+bin/ffmpeg
+bin/ffplay
+bin/ffprobe

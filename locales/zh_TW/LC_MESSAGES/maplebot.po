@@ -1,0 +1,70 @@
+# Chinese translations for PACKAGE package
+# traditional Chinese translation for PACKAGE.
+# Copyright (C) 2024 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# root <root@discord-bot.local>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-02 18:13+0000\n"
+"PO-Revision-Date: 2024-09-02 16:20+0000\n"
+"Last-Translator: root <root@discord-bot.local>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@lists.slat.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.py:55
+msgid "Please run this command in a guild"
+msgstr "請在伺服器中執行此指令"
+
+#: src/main.py:97
+msgid "Playing the next song in playlist"
+msgstr "正在播放播放列表中的下一首歌曲"
+
+#: src/main.py:100
+msgid "Completed playing all songs"
+msgstr "所有歌曲播放完畢"
+
+#: src/main.py:118
+msgid "Added to playlist"
+msgstr "已加入播放列表"
+
+#: src/main.py:121
+msgid "Added to playlist and playing"
+msgstr "已加入播放列表並正在播放"
+
+#: src/main.py:138
+msgid "No song is currently playing"
+msgstr "目前沒有歌曲在播放"
+
+#: src/main.py:153
+msgid "Invalid index"
+msgstr "無效的索引"
+
+#: src/main.py:157
+msgid "Inserted song into list"
+msgstr "已將歌曲插入列表"
+
+#: src/main.py:170
+msgid "No song is currently paused"
+msgstr "目前沒有歌曲在暫停中"
+
+#: src/main.py:194
+msgid "The bot is not connected to a voice channel"
+msgstr "機器人未連接到語音頻道"
+
+#: src/main.py:216
+msgid "Playlist is empty"
+msgstr "播放列表是空的"
+
+#: src/main.py:220
+msgid "Playlist for current guild"
+msgstr "當前伺服器的播放列表"
+
+#: src/main.py:242
+msgid "Synced!"
+msgstr "已同步！"
