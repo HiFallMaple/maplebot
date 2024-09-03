@@ -21,9 +21,6 @@ translation = gettext.translation(config.APP_NAME, localedir=config.LOCALEDIR, l
 global _
 _ = translation.gettext
 
-logger.info(gettext.find(config.APP_NAME, config.LOCALEDIR))
-
-
 
 @dataclass
 class Song:
