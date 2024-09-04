@@ -70,10 +70,7 @@ def get_song_metadata(song: str) -> Song:
             info = ydl.extract_info(song, download=False)
         else:
             info = ydl.extract_info(f"ytsearch:{song}", download=False)["entries"][0]
-    with open("info.json", "w") as f:
-        import json
 
-        f.write(json.dumps(info, indent=4))
     return Song(
         title=info["title"],
         channel=info["channel"],
