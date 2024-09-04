@@ -7,6 +7,7 @@ import logging
 from dataclasses import dataclass
 from discord import FFmpegPCMAudio
 from discord.ext import commands
+from discord.ext.commands import Context
 from discord.utils import get
 from collections import defaultdict
 
@@ -44,7 +45,7 @@ intents.presences = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 
-async def check_command_in_guild(ctx: discord.Interaction) -> bool:
+async def check_command_in_guild(ctx: Context) -> bool:
     """checks if the command is run in a guild"""
     if isinstance(ctx.channel, discord.TextChannel) and ctx.guild is not None:
         return True
@@ -53,7 +54,7 @@ async def check_command_in_guild(ctx: discord.Interaction) -> bool:
         return False
 
 
-async def join(ctx: discord.Interaction) -> discord.VoiceClient:
+async def join(ctx: Context) -> discord.VoiceClient:
     channel = ctx.author.voice.channel
     voice = get(bot.voice_clients, guild=ctx.guild)
     if voice and voice.is_connected():
@@ -81,7 +82,7 @@ def get_song_metadata(song: str) -> Song:
     )
 
 
-async def play_next(ctx: discord.Interaction, voice: discord.VoiceClient):
+async def play_next(ctx: Context, voice: discord.VoiceClient):
     guild_id = ctx.guild.id
     if len(playlist[guild_id]) > 0:
         current_song[guild_id] = playlist[guild_id].pop()
@@ -98,7 +99,7 @@ async def play_next(ctx: discord.Interaction, voice: discord.VoiceClient):
 
 
 @bot.hybrid_command()
-async def play(ctx: discord.Interaction, song: str):
+async def play(ctx: Context, song: str):
     """Play a song from YouTube"""
     if not await check_command_in_guild(ctx):
         return
@@ -123,7 +124,7 @@ async def play(ctx: discord.Interaction, song: str):
 
 
 @bot.hybrid_command()
-async def pause(ctx: discord.Interaction):
+async def pause(ctx: Context):
     """Pause the current song"""
     if not await check_command_in_guild(ctx):
         return
@@ -136,7 +137,7 @@ async def pause(ctx: discord.Interaction):
 
 
 @bot.hybrid_command()
-async def insert(ctx: discord.Interaction, song: str, index: int):
+async def insert(ctx: Context, song: str, index: int):
     """Insert a song into the list at a specific index"""
     if not await check_command_in_guild(ctx):
         return
@@ -155,7 +156,7 @@ async def insert(ctx: discord.Interaction, song: str, index: int):
 
 
 @bot.hybrid_command()
-async def resume(ctx: discord.Interaction):
+async def resume(ctx: Context):
     """Resume the current song"""
     if not await check_command_in_guild(ctx):
         return
@@ -168,7 +169,7 @@ async def resume(ctx: discord.Interaction):
 
 
 @bot.hybrid_command()
-async def stop(ctx: discord.Interaction):
+async def stop(ctx: Context):
     """Stop all songs"""
     if not await check_command_in_guild(ctx):
         return
@@ -178,7 +179,7 @@ async def stop(ctx: discord.Interaction):
 
 
 @bot.hybrid_command()
-async def leave(ctx: discord.Interaction):
+async def leave(ctx: Context):
     """Leave the voice channel"""
     if not await check_command_in_guild(ctx):
         return
@@ -192,7 +193,7 @@ async def leave(ctx: discord.Interaction):
 
 
 @bot.hybrid_command()
-async def skip(ctx: discord.Interaction):
+async def skip(ctx: Context):
     """Skip the current song"""
     if not await check_command_in_guild(ctx):
         return
@@ -203,7 +204,7 @@ async def skip(ctx: discord.Interaction):
 
 
 @bot.hybrid_command()
-async def list(ctx: discord.Interaction):
+async def list(ctx: Context):
     """Display the current list"""
     if not await check_command_in_guild(ctx):
         return
@@ -232,7 +233,7 @@ async def list(ctx: discord.Interaction):
 
 
 @bot.command()
-async def sync(ctx: discord.Interaction):
+async def sync(ctx: Context):
     sync_result = await bot.tree.sync()
     print(f"Sync result: {sync_result}")
     print(discord.Object(id=ctx.guild.id))
