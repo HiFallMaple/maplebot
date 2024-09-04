@@ -1,13 +1,13 @@
 import os
 
-APP_NAME = 'maplebot'
-LOCALEDIR='../locales'
+APP_NAME = "maplebot"
+LOCALEDIR = "../locales"
 
-TOKEN = os.getenv('DISCORD_TOKEN')
-MAX_PLAYLIST_SIZE = os.getenv('MAX_PLAYLIST_SIZE')
-LOCALE = os.getenv('LOCALE')
-DEFAULT_VOLUME = os.getenv('DEFAULT_VOLUME')
-STAY_TIME = os.getenv('STAY_TIME')
+TOKEN = os.getenv("DISCORD_TOKEN")
+MAX_PLAYLIST_SIZE = os.getenv("MAX_PLAYLIST_SIZE")
+LOCALE = os.getenv("LOCALE")
+DEFAULT_VOLUME = os.getenv("DEFAULT_VOLUME")
+STAY_TIME = os.getenv("STAY_TIME")
 
 YDL_OPTS = {
     "format": "bestaudio/best",
