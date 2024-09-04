@@ -5,3 +5,5 @@ docker-compose.yml
 bin/ffmpeg
 bin/ffplay
 bin/ffprobe
+scripts/docker.sh
+src/info.json
