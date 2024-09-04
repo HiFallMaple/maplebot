@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-02 18:13+0000\n"
+"POT-Creation-Date: 2024-09-04 19:53+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.py:55
+#: src/main.py:52
 msgid "Please run this command in a guild"
 msgstr ""
 
-#: src/main.py:97
+#: src/main.py:95
 msgid "Playing the next song in playlist"
 msgstr ""
 
-#: src/main.py:100
+#: src/main.py:98
 msgid "Completed playing all songs"
 msgstr ""
 
@@ -37,34 +37,58 @@ msgstr ""
 msgid "Added to playlist and playing"
 msgstr ""
 
-#: src/main.py:138
+#: src/main.py:128
+msgid "An error occurred: "
+msgstr ""
+
+#: src/main.py:140
+msgid "Paused the current song"
+msgstr ""
+
+#: src/main.py:142
 msgid "No song is currently playing"
 msgstr ""
 
-#: src/main.py:153
+#: src/main.py:157
 msgid "Invalid index"
 msgstr ""
 
-#: src/main.py:157
+#: src/main.py:161
 msgid "Inserted song into list"
 msgstr ""
 
-#: src/main.py:170
+#: src/main.py:173
+msgid "Resumed the current song"
+msgstr ""
+
+#: src/main.py:175
 msgid "No song is currently paused"
 msgstr ""
 
-#: src/main.py:194
+#: src/main.py:186
+msgid "Stopped all songs"
+msgstr ""
+
+#: src/main.py:199
+msgid "Left the voice channel"
+msgstr ""
+
+#: src/main.py:201
 msgid "The bot is not connected to a voice channel"
 msgstr ""
 
-#: src/main.py:216
+#: src/main.py:211 src/main.py:225
 msgid "Playlist is empty"
 msgstr ""
 
-#: src/main.py:220
+#: src/main.py:212
+msgid "Skip"
+msgstr ""
+
+#: src/main.py:229
 msgid "Playlist for current guild"
 msgstr ""
 
-#: src/main.py:242
+#: src/main.py:251
 msgid "Synced!"
 msgstr ""
